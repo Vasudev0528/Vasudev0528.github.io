@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasudev K. | Full-Stack Developer</title>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply text-slate-900 bg-slate-50;
+        }
+
+        /* Custom dark mode for demonstration */
+        body.dark-mode {
+            @apply bg-slate-900 text-slate-100;
+        }
+
+        body.dark-mode .card {
+            @apply bg-slate-800 text-slate-100;
+        }
+
+        body.dark-mode .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Typing cursor animation */
+        .typing-effect::after {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: currentColor;
+            margin-left: 5px;
+            animation: blink-caret .75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        // Tailwind config with custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1E293B',
+                        'secondary': '#F8FAFC',
+                        'accent': '#FB923C',
+                        'supporting': {
+                            white: '#FFFFFF',
+                            gray: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary text-secondary">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-primary/90 backdrop-blur-md py-4 px-6 lg:px-8 border-b border-white/10">
+        <nav class="container mx-auto flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-accent">Vasudev.K</a>
+            <ul class="flex space-x-6 md:space-x-8 text-sm md:text-base">
+                <li><a href="#about" class="hover:text-accent transition-colors duration-300">About</a></li>
+                <li><a href="#projects" class="hover:text-accent transition-colors duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a></li>
+            </ul>
+            <a href="#" class="hidden md:inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105">
+                Download Resume
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 lg:px-8">
+        
+        <!-- Home/Hero Section -->
+        <section id="home" class="py-24 md:py-32 flex flex-col items-center text-center min-h-[calc(100vh-80px)] justify-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white drop-shadow-md">
+                Full-Stack Developer & Digital Problem Solver
+            </h1>
+            <p id="typing-text" class="text-lg md:text-xl text-supporting-gray mb-8">
+                <span class="typing-effect"></span>
+            </p>
+            <div class="flex space-x-4">
+                <a href="#projects" class="inline-flex items-center justify-center rounded-xl bg-accent px-8 py-3 text-lg font-semibold text-white shadow-lg transition-transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#" class="hidden sm:inline-flex items-center justify-center rounded-xl bg-supporting-gray/20 px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105 hover:bg-white/10">
+                    Download Resume
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The Human Behind the Code</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                    <img src="https://placehold.co/400x400/1E293B/F8FAFC?text=Your+Photo" alt="A professional portrait of Vasudev.K" class="rounded-3xl w-full shadow-2xl">
+                </div>
+                <div class="w-full md:w-2/3 space-y-6">
+                    <p class="text-lg leading-relaxed text-white">Hey there! I'm vasudev.k– a passionate full-stack developer who loves turning wild ideas into pixel-perfect reality. Currently crushing my BTech (Class of 2025), but I've been coding since before it was cool to have "developer" in your bio.</p>
+                    <p class="text-lg leading-relaxed text-white">My superpower? Building seamless web experiences that make users go "wow, that just works!" From crafting responsive frontends with React and Vue to architecting robust backends with Python and Django, I speak fluent code in multiple dialects.</p>
+                    <p class="text-lg leading-relaxed text-white">When I'm not debugging at 2 AM (okay, maybe I am), you'll find me exploring the latest web technologies, creating digital designs in Illustrator, or helping teams bring their visions to life through clear communication and solid project management.</p>
+                    <p class="text-lg leading-relaxed text-white">I believe great software isn't just about clean code – it's about solving real problems for real people. Ready to build something amazing together?</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-center mt-20 mb-10">My Technical Toolbox</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Card Example -->
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-react text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">React</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-js-square text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">JavaScript (ES6+)</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-python text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">Python</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-node-js text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">Node.js</span>
+                </div>
+                 <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-solid fa-database text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">SQL/NoSQL</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-git-alt text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">Git</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-docker text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">Docker</span>
+                </div>
+                 <div class="flex flex-col items-center justify-center text-center p-6 bg-supporting-gray/10 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <i class="fa-brands fa-aws text-4xl text-accent mb-2"></i>
+                    <span class="text-lg font-semibold">Cloud (AWS/GCP)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-secondary/10 rounded-3xl p-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Things I've Built</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="card p-6 rounded-2xl shadow-lg bg-white/10 transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1E293B/F8FAFC?text=Project+1" alt="Project 1 thumbnail" class="rounded-xl mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">Project 1: [Title]</h3>
+                    <p class="text-supporting-gray mb-4">[Brief description of the project and its purpose.]</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">React</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Node.js</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">MongoDB</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <a href="#" class="text-accent hover:underline transition-colors duration-300">See Live Demo</a>
+                        <a href="#" class="text-supporting-gray hover:text-white transition-colors duration-300">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="card p-6 rounded-2xl shadow-lg bg-white/10 transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1E293B/F8FAFC?text=Project+2" alt="Project 2 thumbnail" class="rounded-xl mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">Project 2: [Title]</h3>
+                    <p class="text-supporting-gray mb-4">[Brief description of the project and its purpose.]</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Vue</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Python</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Django</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <a href="#" class="text-accent hover:underline transition-colors duration-300">See Live Demo</a>
+                        <a href="#" class="text-supporting-gray hover:text-white transition-colors duration-300">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="card p-6 rounded-2xl shadow-lg bg-white/10 transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1E293B/F8FAFC?text=Project+3" alt="Project 3 thumbnail" class="rounded-xl mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">Project 3: [Title]</h3>
+                    <p class="text-supporting-gray mb-4">[Brief description of the project and its purpose.]</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Svelte</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Firebase</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <a href="#" class="text-accent hover:underline transition-colors duration-300">See Live Demo</a>
+                        <a href="#" class="text-supporting-gray hover:text-white transition-colors duration-300">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                 <div class="card p-6 rounded-2xl shadow-lg bg-white/10 transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1E293B/F8FAFC?text=Project+4" alt="Project 4 thumbnail" class="rounded-xl mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">Project 4: [Title]</h3>
+                    <p class="text-supporting-gray mb-4">[Brief description of the project and its purpose.]</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">React Native</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Express.js</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <a href="#" class="text-accent hover:underline transition-colors duration-300">See Live Demo</a>
+                        <a href="#" class="text-supporting-gray hover:text-white transition-colors duration-300">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                 <div class="card p-6 rounded-2xl shadow-lg bg-white/10 transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1E293B/F8FAFC?text=Project+5" alt="Project 5 thumbnail" class="rounded-xl mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-white">Project 5: [Title]</h3>
+                    <p class="text-supporting-gray mb-4">[Brief description of the project and its purpose.]</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Next.js</span>
+                        <span class="bg-accent/20 text-accent rounded-full px-3 py-1 text-sm font-semibold">Tailwind CSS</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <a href="#" class="text-accent hover:underline transition-colors duration-300">See Live Demo</a>
+                        <a href="#" class="text-supporting-gray hover:text-white transition-colors duration-300">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Let's Create Together</h2>
+            <div class="max-w-xl mx-auto p-8 rounded-3xl bg-secondary shadow-2xl">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring focus:ring-accent focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring focus:ring-accent focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring focus:ring-accent focus:ring-opacity-50"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-accent px-8 py-3 text-lg font-semibold text-white shadow-lg transition-transform hover:scale-105">
+                            Send Message
+                        </button>
+                        <div class="flex space-x-4 text-2xl text-gray-700">
+                            <a href="https://github.com/Vasudev0528" target="_blank" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:vasudev.k2007@gmail.com" class="hover:text-accent transition-colors duration-300"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4 text-gray-500">
+                        <span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">
+                            <svg class="-ml-1 mr-1.5 h-2 w-2 text-green-400" fill="currentColor" viewBox="0 0 8 8">
+                                <circle cx="4" cy="4" r="3" />
+                            </svg>
+                            Currently Available for New Opportunities
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-supporting-gray text-sm">
+        <p>&copy; 2023 Vasudev K. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for typing effect and smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingText = document.getElementById('typing-text').querySelector('span');
+            const phrases = [
+                "Crafting Web Experiences That Actually Work",
+                "Code + Creativity = Digital Magic ✨",
+                "Full-Stack Developer & Digital Problem Solver"
+            ];
+            let currentPhraseIndex = 0;
+            let currentText = '';
+            let isDeleting = false;
+            let typingSpeed = 150;
+
+            function type() {
+                const fullText = phrases[currentPhraseIndex];
+                if (isDeleting) {
+                    currentText = fullText.substring(0, currentText.length - 1);
+                } else {
+                    currentText = fullText.substring(0, currentText.length + 1);
+                }
+
+                typingText.textContent = currentText;
+
+                let delay = typingSpeed;
+
+                if (isDeleting) {
+                    delay /= 2;
+                }
+
+                if (!isDeleting && currentText === fullText) {
+                    delay = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && currentText === '') {
+                    isDeleting = false;
+                    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                    delay = 500;
+                }
+
+                setTimeout(type, delay);
+            }
+            
+            // Start the typing effect
+            type();
+
+            // Dark mode toggle (optional, for demonstration)
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
